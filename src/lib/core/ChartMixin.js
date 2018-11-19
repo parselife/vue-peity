@@ -7,7 +7,7 @@ export default {
   },
   props: {
     // 图表数据
-    chartData: {
+      values: {
       type: Array,
       required: true
     },
@@ -22,15 +22,15 @@ export default {
     width() {
       return Util.getWidth(this.size);
     },
-    getMax() {
-      return Math.max.apply(Math, this.max === undefined ? this.chartData : this.chartData.concat(this.max))
+    maxVal() {
+      return Math.max.apply(Math, this.max === undefined ? this.values : this.values.concat(this.max))
     },
-    getMin() {
-      return Math.min.apply(Math, this.min == undefined ? this.chartData : this.chartData.concat(this.min))
+    minVal() {
+      return Math.min.apply(Math, this.min == undefined ? this.values : this.values.concat(this.min))
     },
     // max - min
     diff() {
-      return this.getMax() - this.getMin();
+      return this.maxVal - this.minVal;
     }
   },
   methods: {
