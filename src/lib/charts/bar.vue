@@ -2,7 +2,7 @@
  Created by Alex on 2018/11/16, v1.0
 -->
 <template>
-  <div class="bar-chart">
+  <div class="peity-chart-wrapper">
     <div v-if="svgSupported">
 
     </div>

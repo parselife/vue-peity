@@ -7,12 +7,29 @@ export default {
   },
   props: {
     // 图表数据
-      values: {
+    values: {
       type: Array,
       required: true
     },
+    /**
+     * 大小
+     * 支持以下枚举
+     * sm h16 w32
+     * md h24 w48
+     * lg h32 w64
+     * xl h64 w128
+     * 或自定义数组([宽度,高度]) eg. [16,32]
+     *
+     */
+    size: {
+      type: [String, Array],
+      default: 'sm'
+    },
     max: Number,
-    min: Number
+    min: {
+      type: Number,
+      default: 0
+    }
 
   },
   computed: {

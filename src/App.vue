@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <h1>{{ msg }}</h1>
-        <v-line :values="arr" size="xl" fill-color="#ffff00" stroke-color="#008888"></v-line>
+      <span>line:</span>
+        <v-line :values="arr" size="lg" style="display: inline"></v-line>
         <button @click="click">change</button>
     </div>
 </template>
