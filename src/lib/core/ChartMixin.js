@@ -56,6 +56,13 @@ export default {
      */
     svgSupported() {
       return 'createElementNS' in document && document.createElementNS('http://www.w3.org/2000/svg', {}).createSVGRect
+    },
+    fixNegative() {
+      this.values.map((val) => {
+        if (val < 0) {
+          val = 0
+        }
+      })
     }
   },
 }
